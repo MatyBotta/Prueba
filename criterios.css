@@ -1,0 +1,383 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+
+html{
+  scroll-behavior: smooth;
+  
+}
+
+.texto-informacion{
+
+width: 80%;
+margin: auto;
+padding-left: 10px;
+padding-right: 10px;
+
+}
+
+hr{
+border:1px #b7d6ff solid;
+}
+
+
+
+
+
+/*--------------------------HEADER CON MENU--------------------------------*/
+
+
+
+
+header{
+  width: 100%;
+  height: 180vh;
+  background-image: url(../IMG/prueba.jpg);
+ 
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: static;
+  
+ 
+  
+}
+
+  
+
+nav{
+  
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  
+
+}
+
+.logo{
+  width: 60px;
+  margin-left: 60px;
+  margin-top: 10px;
+
+}
+
+.bar-btn{
+  font-size: 25px;
+  color: #001F54;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav-menu{
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background: /*rgba(99, 97, 97, 0.8)*/ lightblue;   
+  transition: all .3s;
+  text-align: center;
+}
+
+.nav-menu li{
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all .5s;
+
+}
+
+.nav-menu li a{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #186fe0;
+
+}
+
+.nav-menu li a.active, .nav-menu li a:hover{
+  color: #6692CC;
+  border-bottom: 1px solid #6692CC;
+  transition: .3s;
+}
+
+.nav-menu li a.active:hover{
+  color: #6692CC;
+  transition: .3s;
+}
+
+#check{
+  display: none;
+  
+}
+
+#check:checked ~ .nav-menu{
+  height: 100vh;
+  z-index: 1;
+  transition: .1s;
+}
+
+
+#check:checked ~ .nav-menu li{
+  display: block;
+}
+
+.service-card {
+  font-family: 'Overpass', sans-serif;
+ 
+  height: auto;
+  width: 300px;;
+  color:rgb(216, 214, 214);
+  background-color: #172d8d;
+  border-radius: 12px;
+  margin-left: 60px;
+  margin-top: 40px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  transition: all .15s ease;
+  cursor: pointer;
+}
+.title{
+  padding-left: 15px;
+  padding-bottom: 0px;
+  padding-top: 15px;
+  font-size: 24px;
+  border-bottom: 2px solid #d0cffa;
+  color:rgb(89, 187, 252);
+}
+.bodyin {
+  font-size: 16px;
+  padding: 15px;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.row{
+  display: flex;
+}
+
+
+
+/*----------------TITULO E IMAGEN--------------*/
+
+
+
+.dielmod{
+width: 70px;
+margin-bottom: 5px;
+
+}
+
+.texto-centro{
+padding: 0 30px;
+margin-top: 30px;
+text-align: center;
+
+}
+
+.texto-centro h3{
+font-size: 40px;
+margin-bottom: 3px;
+color:#186fe0;
+}
+
+.texto-centro h2{
+font-size: 18px;
+margin-bottom: 3px;
+font-weight: 600;
+color: #186fe0;
+}
+
+
+.titulo1{
+text-align: center;
+margin-top: 35px;
+/*color: #186fe0;*/
+}
+
+
+
+
+
+/*------------------GALERIA------------------*/
+
+
+
+
+.img {
+  width: 100%; 
+  height: auto;
+}
+h2 {
+  margin-bottom: 1.5em;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 1em;
+  margin: 25px;
+}
+
+.grid2-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1em;
+  
+  text-align: center;
+  margin-left: 19.5%;
+  margin-right: 19.5%;
+  margin-bottom: 3%;
+}
+
+
+.location-listing {
+  position: relative;
+}
+
+.location-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.location-image img {
+  
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+
+
+.location-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: #186fe060;
+  color: white;                                    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-title i{
+  font-size: 45px;
+  color: white;
+}
+
+
+.location-listing:hover .location-title {
+  opacity: 1;
+}
+
+.location-listing:hover .location-image img {
+  filter: blur(2px);
+}
+
+
+
+
+
+
+.texto-informacion{
+  
+  width: 80%;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+/*-----------------Celulares------------------*/
+
+
+
+
+
+@media (hover: none) { 
+  .location-title {
+    opacity: 1;
+  }
+  .location-image img {
+    filter: blur(2px);
+  }
+}
+
+
+@media screen  and (min-width: 800px) {
+  .logo{
+      margin-left: 50px;
+
+  }
+  nav{
+      height: 90px;
+  }
+
+  .bar-btn{
+      display: none;
+  }
+  
+  .nav-menu{
+      position: relative;
+      height: 100px;
+      top: 0;
+      background: none;
+      transition: none;
+      text-align: right;
+      margin-right: 50px;
+
+  }
+  .nav-menu li{
+      display: inline-block;
+      line-height: 100px;
+      margin: 0 20px;
+      transition: none;
+  }
+
+  .nav-menu li a{
+      font-size: 13px;
+  }
+
+  .label{
+    height: auto;
+  }
+
+  @media screen and (max-width: 900px) {
+    .row{
+        display: flex;
+        flex-direction: column;
+      }
+  }
+  
+}
